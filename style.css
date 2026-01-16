@@ -1,0 +1,206 @@
+
+:root {
+    --primary: #6750A4;
+    --on-primary: #ffffff;
+    --primary-container: #EADDFF;
+    --on-primary-container: #21005D;
+    --secondary: #625B71;
+    --surface: #fef7ff;
+    --surface-variant: #e7e0ec;
+    --outline: #79747e;
+    --background: #fffbfe;
+    --on-background: #1c1b1f;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background);
+    color: var(--on-background);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+.app-bar {
+    background-color: var(--surface);
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.app-bar-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-title {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+    color: var(--on-background);
+}
+
+.app-icons {
+    color: var(--secondary);
+}
+
+
+.input-container {
+    padding: 8px 16px 16px;
+    background: var(--surface);
+}
+
+.search-wrapper {
+    background: var(--surface-variant);
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    padding: 4px 16px;
+    height: 56px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.search-wrapper input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    height: 100%;
+    font-size: 16px;
+    outline: none;
+    color: var(--on-background);
+}
+
+.search-wrapper .clear {
+    background: transparent;
+    border: none;
+    color: var(--secondary);
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.search-wrapper .clear:active {
+    background-color: rgba(0,0,0,0.05);
+}
+
+
+.container {
+    padding: 16px;
+}
+
+.myfontlist {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+
+.myfont {
+    background: var(--surface);
+    border: 1px solid var(--surface-variant);
+    border-radius: 16px;
+    padding: 16px;
+    position: relative;
+    transition: transform 0.1s ease, background-color 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.myfont:active {
+    background-color: var(--primary-container);
+    transform: scale(0.98);
+}
+
+.font-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.myfont p {
+    margin: 0;
+    font-size: 20px;
+    color: var(--on-background);
+    word-break: break-all;
+    font-family: inherit; 
+}
+
+.copy-hint {
+    font-size: 10px;
+    color: var(--outline);
+    text-align: right;
+    margin-top: 4px;
+}
+
+
+.copied {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #313033;
+    color: #f4eff4;
+    padding: 12px 24px;
+    border-radius: 25px;
+    z-index: 1000;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    animation: slideUp 0.3s ease-out;
+}
+
+.copied input { display: none; }
+
+@keyframes slideUp {
+    from { bottom: -50px; opacity: 0; }
+    to { bottom: 32px; opacity: 1; }
+}
+
+.bottom-info {
+    padding: 24px 16px 80px;
+}
+
+.footer-card {
+    background: var(--primary-container);
+    color: var(--on-primary-container);
+    padding: 24px;
+    border-radius: 24px;
+}
+
+.footer-card h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.btn-more {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--primary);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+::-webkit-scrollbar { width: 0px; background: transparent; }
